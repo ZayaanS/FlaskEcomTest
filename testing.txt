@@ -1,0 +1,51 @@
+FUNCTIONALITY TO TEST 
+_______________________________________
+
+DB MODELS
+USER
+x user model creates user object
+x user crud 
+x prettier_budget method works as expected
+x password method works as expected (getter)
+x password setter method works as expected
+x check password correction method works as expected
+- can purchase method works as expected
+- can sell method works as expected
+ITEM
+- item model creates item object 
+- item crud
+- repr method works as expected
+- buy method works as expected
+- sell method works as expected
+
+
+ROUTES
+HOME 
+- route / returns home page
+- route /home returns home page
+MARKET
+- route /market returns market page
+- route /market can post request to buy item if user has money
+- route /market post request to buy item returns error message if user does not have enough money
+- route /market can post request to sell item if user owns item
+- route /market post request to sell item returns error message if user does not own item
+REGISTER
+- route /register returns register page
+- route /register can post request to create user if user enters valid details
+- route /register post request returns error if user enters invalid details
+LOGIN
+- route /login returns login page
+- route /login can post request to log in if user enters correct details
+- route /login sends error message for post request with incorrect details
+LOGOUT
+- route /logout logs user out 
+- route /logout redirects user to logout page 
+
+
+FORMS
+REGISTER
+- validate username method works as expected
+- validate email address method works as expected
+LOGIN
+PURCHASE ITEM
+SELL ITEM
