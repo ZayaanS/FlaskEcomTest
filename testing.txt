@@ -9,11 +9,11 @@ x prettier_budget method works as expected
 x password method works as expected (getter)
 x password setter method works as expected
 x check password correction method works as expected
-- can purchase method works as expected
-- can sell method works as expected
+x can purchase method works as expected
+x can sell method works as expected
 ITEM
-- item model creates item object 
-- item crud
+x item model creates item object 
+x item crud
 - repr method works as expected
 - buy method works as expected
 - sell method works as expected
