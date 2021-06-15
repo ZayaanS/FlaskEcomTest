@@ -25,7 +25,7 @@ HOME
 - route /home returns home page
 MARKET
 - route /market returns market page
-- route /market can post request to buy item if user has money
+x route /market can post request to buy item if user has money
 - route /market post request to buy item returns error message if user does not have enough money
 - route /market can post request to sell item if user owns item
 - route /market post request to sell item returns error message if user does not own item
