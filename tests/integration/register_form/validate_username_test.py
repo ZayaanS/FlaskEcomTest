@@ -21,6 +21,6 @@ class TestValidateUsernameMethod(BaseTest):
                 with self.assertRaises(ValidationError) as context:
                     # call validate username method with object that has username that already exists in db
                     RegisterForm().validate_username(Chibi)
-                    # assert that validation sexception message is that username already exists
+                    # assert that validation exception message is that username already exists
                     self.assertEqual(str(context.exception), 'Username already exists! Please try a different username')
                 

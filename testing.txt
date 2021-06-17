@@ -53,7 +53,7 @@ LOGOUT
 FORMS
 
 REGISTER
-- validate username method works as expected
+x validate username method works as expected
 - validate email address method works as expected
 
 LOGIN
