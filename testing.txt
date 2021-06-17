@@ -38,23 +38,23 @@ x route /market post request to sell item returns error message if user does not
 REGISTER
 x route /register returns register page
 x route /register can post request to create user if user enters valid details
-- route /register post request returns error if user enters invalid details
+x route /register post request returns error if user enters invalid details
 
 LOGIN
-- route /login returns login page
-- route /login can post request to log in if user enters correct details
-- route /login sends error message for post request with incorrect details
+x route /login returns login page
+x route /login can post request to log in if user enters correct details
+x route /login sends error message for post request with incorrect details
 
 LOGOUT
-- route /logout logs user out 
-- route /logout redirects user to logout page 
+x route /logout logs user out 
+x route /logout redirects user to home page 
 
 
 FORMS
 
 REGISTER
 x validate username method works as expected
-- validate email address method works as expected
+x validate email address method works as expected
 
 LOGIN
 

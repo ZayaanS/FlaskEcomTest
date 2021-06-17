@@ -1,6 +1,7 @@
 from tests.base_test import BaseTest, db
 from market.forms import RegisterForm
 from wtforms.validators import ValidationError
+from market.models import User
 
 class TestValidateEmailMethod(BaseTest):
 
@@ -11,6 +12,10 @@ class TestValidateEmailMethod(BaseTest):
                 
                 # create user with email chibi@gmail.com
                 self.app.post('/register', data=dict(username='chibi', email_address='chibi@gmail.com', password1='passme123', password2='passme123'),follow_redirects=True)
+
+                # assert exists in db
+                user = db.session.query(User).filter_by(username='chibi').first()
+                self.assertIsNotNone(user)
 
                 # creating an object because the form expects an object with data of email address
                 class Chibi():
