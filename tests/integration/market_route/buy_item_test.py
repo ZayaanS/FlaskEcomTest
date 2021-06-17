@@ -1,4 +1,3 @@
-from flask_sqlalchemy.utils import parse_version
 from tests.base_test import BaseTest, db
 from market.models import Item, User
 from flask_login import current_user

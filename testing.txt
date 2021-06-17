@@ -36,8 +36,8 @@ x route /market can post request to sell item if user owns item
 x route /market post request to sell item returns error message if user does not own item
 
 REGISTER
-- route /register returns register page
-- route /register can post request to create user if user enters valid details
+x route /register returns register page
+x route /register can post request to create user if user enters valid details
 - route /register post request returns error if user enters invalid details
 
 LOGIN
