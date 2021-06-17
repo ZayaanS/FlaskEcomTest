@@ -1,7 +1,7 @@
 from tests.base_test import BaseTest, db
 from market.models import User
 from flask import request
-from flask_login import current_user
+from flask_login import current_user, AnonymousUserMixin
 
 class LoginTest(BaseTest):
     # test login success with valid details
@@ -35,7 +35,7 @@ class LoginTest(BaseTest):
         response = self.app.post('/login', data=dict(username='tester', password='test123'), follow_redirects=True)
         # assert user is not logged in
         self.assertIn(b'Username and password are not match! Please try again', response.data)
-        self.assertIsNone(current_user)
+        self.assertFalse(current_user)
 
     # test login error with invalid password
     def test_login_error_password(self):
@@ -50,4 +50,4 @@ class LoginTest(BaseTest):
         response = self.app.post('/login', data=dict(username='test', password='testerrr123'), follow_redirects=True)
         # assert user is not logged in
         self.assertIn(b'Username and password are not match! Please try again', response.data)
-        self.assertIsNone(current_user)
+        self.assertFalse(current_user)
